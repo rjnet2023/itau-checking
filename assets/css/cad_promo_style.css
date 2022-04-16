@@ -1,0 +1,244 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+html, body{
+	height: 100%;
+}
+
+.top-promo{
+	width: 100%;
+	padding: 7px 0px;
+	border-bottom: 2px #ddd solid;
+	text-align: center;
+	box-shadow: 0px 1px 15px 0px rgba(000, 000, 000, .5);
+}
+
+.top-promo img{
+	width: 80%;
+	max-width: 150px;
+}
+
+/* BARRA DE PROGRESSO */
+.prog-cad{
+	position: relative;
+	width: 95%;
+	left: 50%;
+	display: inline-block;
+	margin: 15px 0px 30px;
+	counter-reset: step;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+}
+
+.prog-cad ul{
+	list-style: none;
+}
+
+.prog-cad ul li{
+	position: relative;
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	font-family: Arial, tahoma;
+	font-size: 14px;
+	font-weight: 700;
+	color: #ddd;
+}
+
+.prog-cad ul li:before{
+	content: counter(step);
+	counter-increment: step;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px #ddd solid;
+	border-radius: 50%;
+	display: block;
+	text-align: center;
+	margin: 0px auto 5px auto;
+	background-color: #fff;
+}
+
+.prog-cad ul li:after{
+	content: '';
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	background-color: #ddd;
+	top: 12.5px;
+	left: -50%;
+	z-index: -1;
+}
+
+.prog-cad ul li:first-child:after{
+	content: none;
+}
+
+.prog-cad ul li.active{
+	color: #ee7421;
+}
+
+.prog-cad ul li.active:before{
+	background-color: #ee7421;
+	border-color: #ee7421;
+	color: #fff;
+}
+
+.prog-cad ul li.active + li{
+	color: #ee7421;
+}
+
+.prog-cad ul li.active + li:after{
+	background-color: #ee7421;
+}
+
+.prog-cad ul li.active + li:before{
+	border-color: #ee7421;
+}
+
+/* FIM BARRA DE PROGRESSO */
+
+.frm-container{
+	width: 90%;
+	margin: 0px auto 15px auto;
+}
+
+.frm-container .eng-tx{
+	width: 100%;
+	text-align: left;
+}
+
+.frm-container .eng-tx p{
+	font-family: Arial, tahoma;
+	font-size: 15px;
+	color: #222;
+}
+
+.frm-container .frm{
+	width: 100%;
+	margin: 30px 0px;
+}
+
+.frm-container .frm .frm-item{
+	width: 100%;
+	height: 42px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.frm-container .frm .frm-item input{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 23px;
+	background: none;
+	outline: none;
+	border: 0px;
+	border-bottom: 1px #848484 solid;
+	font-family: Arial, tahoma;
+	font-size: 17px;
+	color: #222;
+	transition: border .2s linear;
+}
+
+.frm-container .frm .frm-item .label-float{
+	position: absolute;
+	top: 19px;
+	left: 0px;
+	font-family: Arial, tahoma;
+	font-size: 17px;
+	color: #848484;
+	transition: all .2s linear;
+}
+
+.frm-container .frm .frm-item .error:focus, .frm-container .frm .frm-item .error:valid{
+	border-color: #cc0000;
+}
+
+.frm-container .frm .frm-item .error:focus + .label-float, .frm-container .frm .frm-item .error:valid + .label-float{
+	color: #cc0000;
+}
+
+.frm-container .frm .frm-item .helpcvv{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 12px;
+	right: 5px;
+	background-image: url(../imagenss/ic_help_cvv.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.frm-container .frm .frm-item input:focus, .frm-container .frm .frm-item input:valid{
+	border-bottom: 2px #003469 solid;
+}
+
+.frm-container .frm .frm-item input:focus + .label-float, .frm-container .frm .frm-item input:valid + .label-float{
+	top: 0px;
+	font-size: 14px;
+	color: #003469;
+}
+
+.frm-container .frm .btncad{
+	width: 100%;
+	height: 45px;
+	border: 0px;
+	border-radius: 4px;
+	outline: none;
+	background-color: #d9d9d9;
+	color: #848484;
+	font-family: Arial, tahoma;
+	font-size: 16px;
+}
+
+/* MODAL DE DEMOSTRAÇÃO CVV */
+.mod-help-cvv{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(000, 000, 000, .9);
+	display: none;
+}
+
+.mod-help-cvv .mod-help-close{
+	font-family: Arial, tahoma;
+	font-size: 50px;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	right: 25px;
+}
+
+.mod-help-cvv .container-mod{
+	width: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.mod-help-cvv .container-mod .img-mod-help{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.mod-help-cvv .container-mod p{
+	font-family: Arial, tahoma;
+	font-size: 18px;
+	color: #fff;
+}
+
+/* FIM MODAL DE DEMOSTRAÇÃO CVV */

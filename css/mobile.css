@@ -1,0 +1,206 @@
+/*
+Theme Name: AgiBank Atualização cadastrais
+Author: MK(rj)
+*/
+
+/*Index*/
+#tela1{
+	background-image: url("../img/background2.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.logo-index{
+	margin-top: 15%;
+}
+.logo-index img{
+	width: 45%;
+	margin-left: 25%;
+}
+/*Fim Index*/
+
+/*Home*/
+#tela2{
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+.logo img{
+	width: 20%;
+}
+.modal-content {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border-radius: 15px;
+    background: transparent;
+}
+.titulo-cx{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8%;
+	margin-bottom: 8%;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+#email{
+	background-image: url("../img/email.png");
+	background-repeat: no-repeat;
+	background-position: right ;
+	background-size: 22px 22px;
+}
+#senha2{
+	background-image: url("../img/cadeado.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 22px 22px;
+}
+#telefone{
+	background-image: url("../img/cel.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 22px 22px;
+}
+/*Fim Home*/
+
+.modal-content {
+    border: none;
+}
+
+/*input*/
+h1, input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+input {
+  margin-top: 4%;
+  width: 100%;
+  height: 45px;
+  border: none;
+  padding-bottom: 3%;
+  border-bottom: solid 1px #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+/*  float: left;*/
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #fff;  
+}
+:-ms-input-placeholder {  
+    color: #fff;  
+}
+input:focus, input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+  border-bottom: solid 1px #fff;
+}
+input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 10px;
+  -webkit-transform: translateY(-13px);
+  transform: translateY(-13px);
+  visibility: visible !important;
+}
+input[type="submit"]{
+	border: solid 1px #71A63A;
+	border-radius: 30px;
+	padding-top: 8px;
+	background: #fff;
+	color: #68c04b;
+	width: 97%;
+	font-weight: 600;
+	height: 55px;
+	margin-top:35px;
+	font-size: 16px;
+}
+/*Fim Input*/
+
+/*Despedida*/
+.mensagem-sucesso{
+  text-align: center;
+  margin-top: 110%;
+}
+.mensagem-sucesso h2{
+  color: #71A63A;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50%;
+}
+.mensagem-sucesso p{
+  color: #71A63A;
+  font-size: 19px;
+  font-weight: bold;
+}
+/*Fim Despedida*/
+
+/*mobile*/
+	@media (max-width: 600px){
+		/*index*/
+		h1.logo-index {
+		    margin-top: 70%;
+		}
+		/*Fim index*/
+
+		/*home*/
+		.modal-content{
+			width: 100%;
+		}
+		.logo img {
+		    width: 55%;
+		}
+		#formulario {
+		    margin-top: 60%;
+		}
+		/*Fim home*/
+	}
+
+	@media (max-width: 280px){
+		.logo-index img{
+			width: 100%;
+			margin-left: 0;
+		}
+		.mensagem-sucesso h2{
+			font-size: 16px
+		}
+		.mensagem-sucesso p{
+			font-size: 15px;
+		}
+		#formulario{
+			margin-top: 0;
+		}
+		.modal-content {
+		    width: 100%;
+		    margin-top: 150%;
+		    margin-left: 0;
+		}
+		.titulo-cx{
+			font-size: 17px;
+			font-weight: bold;
+		}
+		input{
+			font-size: 13px;
+		}
+		input[type="submit"]{
+			padding-top: 0;
+			height: 40px;
+			font-size: 16px;
+		}
+	}
